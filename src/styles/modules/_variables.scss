@@ -3,11 +3,13 @@
   --body-bg-color-raw: 12, 12, 12;
   --secondary-container-bg-raw: 32, 32, 32;
   --primary-text-color-raw: 230, 230, 230;
+  --secondary-text-color-raw: 72, 72, 72;
   --border-color-raw: 52, 52, 52;
 
   // Usable colors
   --body-bg-color: rgb(var(--body-bg-color-raw));
   --secondary-container-bg: rgb(var(--secondary-container-bg-raw));
   --primary-text-color: rgb(var(--primary-text-color-raw));
+  --secondary-text-color: rgb(var(--secondary-text-color-raw));
   --border-color: rgb(var(--border-color-raw))
 }

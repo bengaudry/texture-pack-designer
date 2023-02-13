@@ -11,3 +11,9 @@
   grid-template-columns: 20% 80%;
   width: 100vw;
 }
+
+.tab-panel {
+  width: 100%;
+  height: calc(100vh - 30px);
+  background-color: black;
+}

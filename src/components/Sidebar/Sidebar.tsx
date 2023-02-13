@@ -1,11 +1,10 @@
 import { SideBarItems, SideBarItemsList } from "@/components/Sidebar/index";
 import { useState } from "react";
 
-export function Sidebar() {
-  const [activeTab, setActiveTab] = useState<SideBarItemsList>(
-    SideBarItemsList.textures
-  );
-
+export function Sidebar(props: {
+  activeTab: SideBarItemsList;
+  setActiveTab: CallableFunction;
+}) {
   return (
     <div className="sidebar">
       <ul className="sidebar-items">
@@ -13,9 +12,11 @@ export function Sidebar() {
           return (
             <div
               className={`${
-                item.ref === activeTab ? "active" : ""
+                item.ref === props.activeTab ? "active" : ""
               } sidebar-item`}
-              onClick={() => setActiveTab(item.ref)}
+              onClick={() => {
+                props.setActiveTab(item.ref);
+              }}
             >
               <img src={item.iconPath} alt="" />
               <label>{item.name}</label>

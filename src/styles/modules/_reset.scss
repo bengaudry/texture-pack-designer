@@ -11,6 +11,9 @@
 
 body {
   background-color: var(--body-bg-color);
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 ul, ol {
@@ -28,4 +31,9 @@ a {
 
 button:hover {
   cursor: pointer;
+}
+
+img {
+  height: 100%;
+  width: 100%;
 }

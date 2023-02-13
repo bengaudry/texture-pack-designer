@@ -1,14 +1,14 @@
 {
-  "name": "electron-vite-react",
-  "version": "2.1.0",
+  "name": "texture-pack-designer",
+  "version": "0.0.2",
   "main": "dist-electron/main/index.js",
-  "description": "Electron Vite React boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
+  "description": "Texture pack designer is a free software that allows minecraft users (Java version only for now) to create their own texture packs easily with a lot of tools such as in-app texture modification, visual scripting...\n",
+  "author": "Ben Gaudry",
   "license": "MIT",
   "private": true,
   "debug": {
     "env": {
-      "VITE_DEV_SERVER_URL": "http://127.0.0.1:7777/"
+      "VITE_DEV_SERVER_URL": "http://127.0.0.1:5173/"
     }
   },
   "scripts": {
