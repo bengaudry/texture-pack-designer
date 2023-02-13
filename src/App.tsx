@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="app-layout">
       <TopBar />
-      <div>
+      <div className="body-layout">
         <Sidebar />
       </div>
     </div>

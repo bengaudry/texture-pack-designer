@@ -1,31 +1,47 @@
 interface SideBarItem {
   name: string;
+  ref: SideBarItemsList;
   iconPath: string;
+}
+
+export enum SideBarItemsList {
+  textures,
+  particles,
+  entities,
+  gui,
+  paintings,
+  items,
 }
 
 export const SideBarItems: SideBarItem[] = [
   {
     name: "Textures",
+    ref: SideBarItemsList.textures,
     iconPath: "/tab-icons/mc-block.png",
   },
   {
     name: "Particles",
+    ref: SideBarItemsList.particles,
     iconPath: "/tab-icons/particle.png",
   },
   {
     name: "Entities",
-    iconPath: "/tab-icons/mc-block.png",
+    ref: SideBarItemsList.entities,
+    iconPath: "/tab-icons/entity.png",
   },
   {
     name: "GUI",
-    iconPath: "/tab-icons/mc-block.png",
+    ref: SideBarItemsList.gui,
+    iconPath: "/tab-icons/gui.png",
   },
   {
     name: "Paintings",
-    iconPath: "/tab-icons/mc-block.png",
+    ref: SideBarItemsList.paintings,
+    iconPath: "/tab-icons/painting.png",
   },
   {
     name: "Items",
-    iconPath: "/tab-icons/mc-block.png",
+    ref: SideBarItemsList.items,
+    iconPath: "/tab-icons/sword.png",
   },
 ];
