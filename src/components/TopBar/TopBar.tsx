@@ -15,7 +15,7 @@ interface TopBarItemChildren {
 
 const TopBarItems: TopBarItem[] = [
   {
-    name: "Files",
+    name: "File",
     children: [
       {
         name: "New resource pack",
