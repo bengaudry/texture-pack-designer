@@ -1,0 +1,9 @@
+:root {
+  // Raw colors
+  --body-bg-color-raw: 12, 12, 12;
+  --primary-text-color-raw: 230, 230, 230;
+
+  // Usable colors
+  --body-bg-color: rgb(var(--body-bg-color-raw));
+  --primary-text-color: rgb(var(--primary-text-color-raw));
+}
