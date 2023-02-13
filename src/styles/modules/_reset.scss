@@ -5,8 +5,27 @@
   font-family: "Work Sans", sans-serif;
   color: var(--primary-text-color);
   font-weight: 400;
+  border: 0;
+  background: none;
 }
 
 body {
   background-color: var(--body-bg-color);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  font: inherit;
+  color: inherit;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button:hover {
+  cursor: pointer;
 }
