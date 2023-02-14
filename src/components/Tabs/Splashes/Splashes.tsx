@@ -28,6 +28,14 @@ export function Splashes(props: { projectPath: string }) {
     <div className="splashes-panel">
       <h1 className="panel-title">Splashes</h1>
       <ul className="splashes-list">
+        <button
+          className="cta"
+          onClick={() => {
+            setSplashes([]);
+          }}
+        >
+          Clear all
+        </button>
         {splashes.map((credit) => (
           <li className="splashes-element">
             <input className="splashes-element-name" value={credit} />

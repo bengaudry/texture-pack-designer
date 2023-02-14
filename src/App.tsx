@@ -5,6 +5,7 @@ import { ProjectManager } from "@/components/ProjectManager/ProjectManager";
 
 function App() {
   const [isProjectOpened, setIsProjectOpened] = useState<boolean>(false);
+  const [openedProject, setOpenedProject] = useState<null | string>(null);
 
   const minecraftPath = path.join(
     "C:",
@@ -17,10 +18,16 @@ function App() {
 
   return isProjectOpened ? (
     // Opens editor
-    <Layout minecraftPath={minecraftPath} />
+    <Layout minecraftPath={minecraftPath} project={openedProject as string} />
   ) : (
     // Opens the manager to open or create a project
-    <ProjectManager minecraftPath={minecraftPath} />
+    <ProjectManager
+      minecraftPath={minecraftPath}
+      onProjectOpened={(proj: string) => {
+        setIsProjectOpened(true);
+        setOpenedProject(proj);
+      }}
+    />
   );
 }
 

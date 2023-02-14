@@ -6,13 +6,13 @@ import { Splashes } from "@/components/Tabs/Splashes/Splashes";
 import { useState } from "react";
 import path from "node:path";
 
-export function Layout(props: { minecraftPath: string }) {
+export function Layout(props: { minecraftPath: string; project: string }) {
   const [activeTab, setActiveTab] = useState<SideBarItemsList>(
     SideBarItemsList.textures
   );
 
   const [projectPath, setProjectPath] = useState<string>(
-    path.join(props.minecraftPath, "resourcepacks", "Realistic City PACK")
+    path.join(props.minecraftPath, "resourcepacks", props.project)
   );
 
   return (

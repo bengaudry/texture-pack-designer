@@ -1,0 +1,35 @@
+.project-manager {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  height: 100vh;
+}
+
+.open-project-side {
+  padding: 20px 12.5px 20px 20px;
+  border-right: 1px solid var(--border-color);
+}
+
+.new-project-side {
+  padding: 20px 20px 20px 12.5px;
+  border-left: 1px solid var(--border-color);
+}
+
+.side-title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  li {
+    width: 100%;
+    button {
+      width: 100%;
+      text-align: left;
+    }
+  }
+}

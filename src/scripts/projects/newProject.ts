@@ -13,7 +13,19 @@ function generatePackMeta(description: string) {
   }
 }`;
 }
-export function createProject(props: { name: string; minecraftPath: string }) {
+
+function generatePackConfig(resolution: string): string {
+  return `{
+  "texturesResolution": "${resolution}" 
+}`;
+}
+
+export function createProject(props: {
+  name: string;
+  description: string;
+  texturesResolution: string;
+  minecraftPath: string;
+}) {
   const packPath = path.join(props.minecraftPath, "resourcepacks", props.name);
 
   // Creates the pack's main folder
@@ -26,7 +38,13 @@ export function createProject(props: { name: string; minecraftPath: string }) {
   // Creates the pack.mcmeta file
   fs.writeFileSync(
     path.join(packPath, "pack.mcmeta"),
-    generatePackMeta("This is a description for a beautiful pack")
+    generatePackMeta(props.description)
+  );
+
+  // Creates the projects characteristics :
+  fs.writeFileSync(
+    path.join(packPath, "tpd.config.json"),
+    generatePackConfig(props.texturesResolution)
   );
 
   // Creates the folders in assets folder
