@@ -1,53 +1,26 @@
-import { TopBar } from "@/components/TopBar/TopBar";
-import { Sidebar } from "@/components/Sidebar/Sidebar";
 import { useState } from "react";
-import { SideBarItemsList } from "@/components/Sidebar";
-import { Textures } from "@/components/Tabs/Textures/Textures";
-import { Splashes } from "@/components/Tabs/Splashes/Credits";
 import path from "node:path";
+import { Layout } from "@/components/Layout/Layout";
+import { ProjectManager } from "@/components/ProjectManager/ProjectManager";
 
 function App() {
-  const [activeTab, setActiveTab] = useState<SideBarItemsList>(
-    SideBarItemsList.textures
-  );
-  const [projectPath, setProjectPath] = useState<string>(
-    path.join(
-      "C:",
-      "Users",
-      "benou",
-      "AppData",
-      "Roaming",
-      ".minecraft",
-      "resourcepacks",
-      "tp"
-    )
+  const [isProjectOpened, setIsProjectOpened] = useState<boolean>(false);
+
+  const minecraftPath = path.join(
+    "C:",
+    "Users",
+    "benou",
+    "AppData",
+    "Roaming",
+    ".minecraft"
   );
 
-  return (
-    <div className="app-layout">
-      <TopBar />
-      <div className="body-layout">
-        <Sidebar
-          activeTab={activeTab}
-          setActiveTab={(ref: SideBarItemsList) => {
-            setActiveTab(ref);
-          }}
-        />
-        <div>
-          {activeTab === SideBarItemsList.textures ? <Textures /> : ""}
-          {activeTab === SideBarItemsList.particles ? "Particles" : ""}
-          {activeTab === SideBarItemsList.entities ? "Entities" : ""}
-          {activeTab === SideBarItemsList.gui ? "GUI" : ""}
-          {activeTab === SideBarItemsList.paintings ? "Paintings" : ""}
-          {activeTab === SideBarItemsList.items ? "Items" : ""}
-          {activeTab === SideBarItemsList.splashes ? (
-            <Splashes projectPath={projectPath} />
-          ) : (
-            ""
-          )}
-        </div>
-      </div>
-    </div>
+  return isProjectOpened ? (
+    // Opens editor
+    <Layout minecraftPath={minecraftPath} />
+  ) : (
+    // Opens the manager to open or create a project
+    <ProjectManager minecraftPath={minecraftPath} />
   );
 }
 
