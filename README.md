@@ -30,5 +30,5 @@ To bundle the app, run these commands in the project folder :
 ```sh
 npm run build
 npm i -g electron-packager
-electron-packager ./dist texture-pack-designer --platform=win32 --arch=x86_64
+electron-packager ./dist texture-pack-designer --platform=win32 --arch=x64
 ```
