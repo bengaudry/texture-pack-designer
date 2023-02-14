@@ -3,10 +3,24 @@ import { Sidebar } from "@/components/Sidebar/Sidebar";
 import { useState } from "react";
 import { SideBarItemsList } from "@/components/Sidebar";
 import { Textures } from "@/components/Tabs/Textures/Textures";
+import { Credits } from "@/components/Tabs/Credits/Credits";
+import path from "node:path";
 
 function App() {
   const [activeTab, setActiveTab] = useState<SideBarItemsList>(
     SideBarItemsList.textures
+  );
+  const [projectPath, setProjectPath] = useState<string>(
+    path.join(
+      "C:",
+      "Users",
+      "benou",
+      "AppData",
+      "Roaming",
+      ".minecraft",
+      "resourcepacks",
+      "tp"
+    )
   );
 
   return (
@@ -20,7 +34,17 @@ function App() {
           }}
         />
         <div>
-          <Textures />
+          {activeTab === SideBarItemsList.textures ? <Textures /> : ""}
+          {activeTab === SideBarItemsList.particles ? "Particles" : ""}
+          {activeTab === SideBarItemsList.entities ? "Entities" : ""}
+          {activeTab === SideBarItemsList.gui ? "GUI" : ""}
+          {activeTab === SideBarItemsList.paintings ? "Paintings" : ""}
+          {activeTab === SideBarItemsList.items ? "Items" : ""}
+          {activeTab === SideBarItemsList.credits ? (
+            <Credits projectPath={projectPath} />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

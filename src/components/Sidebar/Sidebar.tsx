@@ -1,12 +1,11 @@
 import { SideBarItems, SideBarItemsList } from "@/components/Sidebar/index";
-import { useState } from "react";
 
 export function Sidebar(props: {
   activeTab: SideBarItemsList;
   setActiveTab: CallableFunction;
 }) {
   return (
-    <div className="sidebar">
+    <div className="sidebar reduced-sidebar">
       <ul className="sidebar-items">
         {SideBarItems.map((item) => {
           return (

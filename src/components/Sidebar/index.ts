@@ -11,6 +11,7 @@ export enum SideBarItemsList {
   gui,
   paintings,
   items,
+  credits,
 }
 
 export const SideBarItems: SideBarItem[] = [
@@ -43,5 +44,10 @@ export const SideBarItems: SideBarItem[] = [
     name: "Items",
     ref: SideBarItemsList.items,
     iconPath: "/tab-icons/sword.png",
+  },
+  {
+    name: "Credits",
+    ref: SideBarItemsList.credits,
+    iconPath: "/tab-icons/credits.png",
   },
 ];

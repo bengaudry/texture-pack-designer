@@ -7,7 +7,7 @@ Texture pack designer is a free software that allows minecraft users (Java versi
 
 ## 🛫 Quick start
 
-```sh
+```shell
 git clone https://github.com/bengaudry/texture-pack-designer
 cd texture-pack-designer
 npm install
@@ -22,3 +22,13 @@ This project uses some libraries, frameworks and bundlers such as :
 - Electron
 - Sass
 - Vite
+
+## 📦 Bundle
+
+To bundle the app, run these commands in the project folder : 
+
+```sh
+npm run build
+npm i -g electron-packager
+electron-packager ./dist texture-pack-designer --platform=win32 --arch=x86_64
+```
