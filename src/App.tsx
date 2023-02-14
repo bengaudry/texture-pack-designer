@@ -3,7 +3,7 @@ import { Sidebar } from "@/components/Sidebar/Sidebar";
 import { useState } from "react";
 import { SideBarItemsList } from "@/components/Sidebar";
 import { Textures } from "@/components/Tabs/Textures/Textures";
-import { Credits } from "@/components/Tabs/Credits/Credits";
+import { Splashes } from "@/components/Tabs/Splashes/Credits";
 import path from "node:path";
 
 function App() {
@@ -40,8 +40,8 @@ function App() {
           {activeTab === SideBarItemsList.gui ? "GUI" : ""}
           {activeTab === SideBarItemsList.paintings ? "Paintings" : ""}
           {activeTab === SideBarItemsList.items ? "Items" : ""}
-          {activeTab === SideBarItemsList.credits ? (
-            <Credits projectPath={projectPath} />
+          {activeTab === SideBarItemsList.splashes ? (
+            <Splashes projectPath={projectPath} />
           ) : (
             ""
           )}

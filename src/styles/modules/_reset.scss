@@ -7,6 +7,8 @@
   font-weight: 400;
   border: 0;
   background: none;
+  font-size: 1rem;
+  line-height: 1;
 }
 
 body {
@@ -39,5 +41,28 @@ img {
 }
 
 input {
+  outline: none;
   background-color: var(--secondary-container-bg);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #212121;
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
 }

@@ -17,3 +17,14 @@
   height: calc(100vh - 30px);
   background-color: black;
 }
+
+.panel-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+  height: 100%;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+}

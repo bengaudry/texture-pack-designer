@@ -1,0 +1,17 @@
+.cta {
+  justify-content: center;
+  background-color: #335e9f;
+  box-shadow: inset 1px 1px 4px rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 300ms;
+
+  &:not(:last-child) {
+    margin-right: var(--default-padding);
+  }
+
+  &:hover {
+    background-color: #4d82d2;
+  }
+}
