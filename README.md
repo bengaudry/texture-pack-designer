@@ -29,6 +29,13 @@ To bundle the app, run these commands in the project folder :
 
 ```sh
 npm run build
+```
+
+Then, in the _dist_ folder, add a file named _package.json_ that contains the content of the _package.json_ file at the root of the project.
+
+__You will need to replace the__ _main_ __field by the name of the bundled script.__
+
+```sh
 npm i -g electron-packager
 electron-packager ./dist texture-pack-designer --platform=win32 --arch=x64
 ```
